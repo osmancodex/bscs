@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  int a[5], temp, min;
+  for(int k=0; k<=4; k++)
+  {
+      cin>>a[k];
+  }
+  
+  
+  for(int i=0; i<4; i++)
+  {
+      min=i;
+      for(int j=i+1; j<5; j++)
+      {
+          if(a[j]<a[min])
+          {
+              min=j;
+          }
+          if(min!=i)
+          {
+              temp = a[i];
+              a[i] = a[min];
+              a[min] = temp;
+          }
+      }
+  }
+  
+    cout << "Array after sorting:" << endl;
+  
+    for(int n=0; n<5; n++)
+      {
+          cout<<a[n]<<endl;
+      }
+  
+
+  
+  return 0;
+}
